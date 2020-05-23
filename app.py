@@ -171,8 +171,6 @@ app.layout = html.Div([
             dcc.Graph(id='map', figure=map, hoverData={'points': [{'text': 'new york<'}]},
                 className='four columns'),
 
-            # html.Div(generate_week_table(), className='two columns'),
-
             dcc.Graph(id='p-dist-hist', figure=p_dist_hist, className='four columns'),
             
 
