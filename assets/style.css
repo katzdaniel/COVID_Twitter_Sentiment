@@ -1,0 +1,21 @@
+/* body { margin: 0; } */
+
+
+.md{
+    font-size: 14px;
+}
+
+#header{
+    font-size: 30px;
+    text-align: center;
+}
+
+#week-slider-title {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* #week-table{
+    display: flex;
+    padding-top: 100px;
+} */
