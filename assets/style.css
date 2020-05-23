@@ -1,8 +1,6 @@
-/* body { margin: 0; } */
-
 
 .md{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #header{
@@ -14,8 +12,3 @@
     text-align: center;
     font-size: 18px;
 }
-
-/* #week-table{
-    display: flex;
-    padding-top: 100px;
-} */
