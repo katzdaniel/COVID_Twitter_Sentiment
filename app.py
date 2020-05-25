@@ -10,6 +10,8 @@ import time, math, pickle, datetime
 from utils import *
 from markdown_text import *
 
+# This file runs the dashboard. Run this file to view the dashboard locally. 
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -120,11 +122,14 @@ city_covid_cases_area.update_layout(
         'x1': week_dict[1][1],}]
 )
 
+# Where the app layout is declared. 
 app.layout = html.Div([
     html.Div([
 
         # first row div
         html.Div([
+
+            # Header text
             html.H1(id='header', 
                 children=['COVID-19 Twitter Sentiment in Biggest 20 Cities in USA'], 
                 className='twelve columns'),
@@ -161,12 +166,10 @@ app.layout = html.Div([
 
         html.Br(),
 
-        # fourth row div, has map and two dist hists
+        # fourth row div, has text, map and polarity dist hist
         html.Div([
 
-            html.P(className='one column'),
-
-            html.Div(first_row_md, className='md three columns'),
+            html.Div(first_row_md, className='md four columns'),
 
             dcc.Graph(id='map', figure=map, hoverData={'points': [{'text': 'new york<'}]},
                 className='four columns'),
@@ -176,12 +179,10 @@ app.layout = html.Div([
 
         ], className='row'),
 
-        # fith row div, has text week table, and cases graph
+        # fith row div, has text, and subjectivity dist graph, and cases graph
         html.Div([
 
-            html.P(className='one column'),
-
-            html.Div(second_row_md, className='md three columns'),
+            html.Div(second_row_md, className='md four columns'),
 
 
             dcc.Graph(
@@ -195,6 +196,8 @@ app.layout = html.Div([
     ])
 ], id='main-div')
 
+
+# Where the interactivity is created. 
 @app.callback(
     Output('map', 'figure'),
     [Input('week-slider', 'value')])

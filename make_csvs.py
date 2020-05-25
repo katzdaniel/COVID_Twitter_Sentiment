@@ -2,6 +2,8 @@ import sqlite3, csv
 from statistics import fmean
 from utils import *
 
+# This file makes both the aggregate csv for the map and the individual tweet data for the distribution hisograms. 
+
 connection = sqlite3.connect(DATABASE_LOC)
 cursor = connection.cursor()
 

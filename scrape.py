@@ -3,6 +3,10 @@ import sqlite3
 from textblob import TextBlob
 from utils import *
 
+# This file scrapes Twitter using twint and then adds it to a sqlite database called tweets.db
+# The amount of tweets scraped and the search terms used are marked below and can be changed.
+# The cities where the location is scraped can be modified in the utils.py file. 
+
 connection = sqlite3.connect(DATABASE_LOC)
 cursor = connection.cursor()
 
@@ -32,6 +36,7 @@ def fill_db(week_dict):
         if len(existing_week_records) > 0: continue
 
         for city in CITIES:
+            # To change the search terms, modify the below list. 
             for term in ['covid', 'coronavirus']:
                 run_twint_and_save(city, week_dict[key][0], week_dict[key][1], key, term)
 
@@ -42,6 +47,7 @@ def run_twint_and_save(city, start_date, end_date, week_num, search_term):
     twint_command = ['twint', 
                      '-s', search_term,
                      '-l', 'en',
+                     # To modify the maximum number of tweets searched per twint call, modify the below number.
                      '--limit', '2000',
                      '--near', city,
                      '--since', start_date.isoformat(),
@@ -116,7 +122,7 @@ def filter_tweet(tweet):
 
 def main():
     init_db()
-    week_dict = init_week_dict()
+    week_dict = init_week_dict()    
     fill_db(week_dict)
 
 if __name__=="__main__": 

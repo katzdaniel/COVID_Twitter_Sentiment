@@ -1,5 +1,9 @@
 import datetime
 
+# This file provides standardized utilites to the data processing, scraping, and visualization parts of this program.
+# The cities scraped can be changed in this file, but the name lists as well as the coordinates and state/county 
+#  dictionaries have to be changed as well. 
+
 DATABASE_LOC = ('data/tweets.db')
 
 def init_week_dict():

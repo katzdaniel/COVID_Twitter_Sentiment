@@ -30,6 +30,7 @@
 - Changing the hover text in the map is bugged in dash so there is extraneous when cities are hovered over.
 - If scraping too much, the scraper will continually time out and not work.
 - Textblob sometimes produces a polarity of exactly .5 or -.5 when the tweet text is not gramatically correct after filtering and thus a wrongful bias forms toward these data points in the polarity and subjectivity averages as well as in the histograms.
+- Hovering on the map, a mean Polarity or Subjectivity score will occasionally have an extraneous number of decimals. 
 
 ## Citations
 - Libraries:

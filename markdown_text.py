@@ -1,5 +1,7 @@
 from dash_core_components import Markdown
 
+# This file is where the markdown for the text in the dashboard is stored. 
+
 first_row_md = Markdown("""  
 ###### Introduction:
 This project attempts to track sentiment (polarity and subjectivity) on Twitter from the top 20 cities in America and easily view the results and compare it to the spread of COVID-19 in those cities.
