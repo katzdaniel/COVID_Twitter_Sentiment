@@ -2,7 +2,7 @@
 
 ## A hosted dashboard can be found [here](https://covid-twitter-sentiment.herokuapp.com/).
 
-**This is school project and should not be thought of as anything more.**
+**This is project for learning and should not be thought of as anything more.**
 
 ## Notes
 - It is against Twitter TOS to share individual tweets without embeding a tweet card so I can not share the database with tweets.
