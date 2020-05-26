@@ -6,13 +6,16 @@ from utils import *
 
 # This file makes the pickle files of the covid growth graphs. 
 
-week_dict = init_week_dict()
 
-tweet_df = pd.read_csv('data/tweet_data.csv')
-covid_df = pd.read_csv('data/us-counties-covid.csv')
 
 
 def make_covid_graph_pickle():
+
+    week_dict = init_week_dict()
+
+    tweet_df = pd.read_csv('data/tweet_data.csv')
+    covid_df = pd.read_csv('data/us-counties-covid.csv')
+
     cities_covid_graph_dict = dict()
 
     max_date = week_dict[tweet_df['Week'].max()][1]
@@ -52,7 +55,7 @@ def make_covid_graph_pickle():
 
         cities_covid_graph_dict[c] = city_covid_fig
 
-    pickle.dump(cities_covid_graph_dict, open('data/covid_cases.p', 'wb'))
+    pickle.dump(cities_covid_graph_dict, open('data/covid_cases_graphs.p', 'wb'))
         
 
 

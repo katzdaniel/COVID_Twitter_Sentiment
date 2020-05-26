@@ -126,31 +126,29 @@ city_covid_cases_area.update_layout(
 app.layout = html.Div([
     html.Div([
 
-        # first row div
+        # first row div, header text
         html.Div([
 
-            # Header text
             html.H1(id='header', 
                 children=['COVID-19 Twitter Sentiment in Biggest 20 Cities in USA'], 
-                className='twelve columns'),
+                className='twelve columns')
+
         ], className='row'),
 
-        # second row div
+        # second row div, week range slider title
         html.Div([
 
-            # Week Range Slider Title
             html.P(id='week-slider-title', children=['Week Range Slider'], 
                 className='twelve columns')
+
         ], className='row'),
 
 
-        # third row div
+        # third row div, week range slider
         html.Div([
 
             html.P('', className='one columns'),
 
-
-            # Week Range Slider
             html.Div([
                 dcc.RangeSlider(
                 id='week-slider',
@@ -197,7 +195,7 @@ app.layout = html.Div([
 ], id='main-div')
 
 
-# Where the interactivity is created. 
+# This callback controls what data the map shows when hovering over cities. 
 @app.callback(
     Output('map', 'figure'),
     [Input('week-slider', 'value')])
@@ -226,7 +224,7 @@ def update_map(selected_weeks):
 
     return map
 
-
+# This callback controls what the dist hists and COVID case graph based on hovered city and selected week(s)
 @app.callback(
     [Output('p-dist-hist', 'figure'),
     Output('s-dist-hist', 'figure'),

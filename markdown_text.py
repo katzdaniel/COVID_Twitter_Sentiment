@@ -11,7 +11,7 @@ This project attempts to track sentiment (polarity and subjectivity) on Twitter 
 - Drag one end of the week range slider to change the week(s) shown in the data.
     - When the two ends are on top of eachother, such as when no changes have been made, click on a selected week to show the two ends of the slider.
     - When the selected week(s) change, the vertical lines in the total cases graph they show the start and end of the selected weeks.
-- Hover over different cities in the map to change the data displayed to be about the selected city.
+- Hover over different cities in the map to change the displayed data to be about the selected city.
     - When hovering over a city, a pop-up will appear that shows information such as average polarity and subjectivty in that city in the given time frame.
 
 """)

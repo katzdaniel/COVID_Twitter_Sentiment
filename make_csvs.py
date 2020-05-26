@@ -1,5 +1,5 @@
 import sqlite3, csv
-from statistics import fmean
+from statistics import mean
 from utils import *
 
 # This file makes both the aggregate csv for the map and the individual tweet data for the distribution hisograms. 
@@ -21,8 +21,8 @@ def write_aggregate_csv(week_dict):
 
                 if(len(data) < 10): continue
                 
-                p_mean = fmean([data[i][-2] for i in range(len(data))])
-                s_mean = fmean([data[i][-1] for i in range(len(data))])
+                p_mean = mean([data[i][-2] for i in range(len(data))])
+                s_mean = mean([data[i][-1] for i in range(len(data))])
 
                 p_mean = str(round(p_mean, 3))
                 s_mean = str(round(s_mean, 3))
