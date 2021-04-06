@@ -10,7 +10,7 @@
     - Or, you can use the processed csv files in the repository which I will update.
 - The dashboard can be slow at times as it needs to process the data to display it, but the covid graphs are saved as pickle objects for optimization as they are not dynamic beyond changing cities. 
 - The dashboard is meant to be displayed on a fullsize 11+ inch screen and will likely not work on smaller screens.
-- The scraping starts from the first week of March as COVID related tweets were scarcer before then. 
+- The scraping starts from the first week of March as COVID related tweets were scarce before then. 
 
 ## Instructions
 
@@ -42,3 +42,6 @@
 - Favicon: https://icons8.com/icons/set/coronavirus
 - NYT COVID dataset: https://github.com/nytimes/covid-19-data
 - List of cities by population: https://worldpopulationreview.com/us-cities/
+
+## Possible Future Improvment
+- Set up a severless function or cron job to auto scrape on regular basis and update data.
